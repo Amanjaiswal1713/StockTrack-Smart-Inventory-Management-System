@@ -1,0 +1,218 @@
+.form {
+    width: 100%;
+}
+
+.formGrid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.formGrid label {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.formGrid label>span {
+    margin-bottom: 8px;
+    color: #334155;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.formGrid label>span small {
+    margin-left: 4px;
+    color: #94a3b8;
+    font-size: 10px;
+    font-weight: 500;
+}
+
+.fullWidth {
+    grid-column: 1 / -1;
+}
+
+/* Entire field box */
+.inputWrapper {
+    width: 100%;
+    height: 54px;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    border: 1px solid #d8e2ec;
+    border-radius: 9px;
+
+    background: #fbfcfe;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.inputWrapper:focus-within {
+    border-color: #10b981;
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+/* Icon gets its OWN column */
+.inputIcon {
+    position: static;
+
+    width: 46px;
+    min-width: 46px;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #64748b;
+    font-size: 16px;
+
+    transform: none;
+    pointer-events: none;
+}
+
+/* Input gets remaining area */
+.inputWrapper input,
+.inputWrapper select {
+    min-width: 0;
+    width: 100%;
+    height: 100%;
+
+    padding: 0 14px 0 0;
+
+    border: 0;
+    outline: 0;
+
+    background: transparent;
+    color: #334155;
+
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.inputWrapper input::placeholder {
+    color: #94a3b8;
+    opacity: 1;
+}
+
+.inputWrapper select {
+    cursor: pointer;
+}
+
+.error {
+    margin-top: 6px;
+
+    color: #dc2626;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+/* Supplier information panel */
+.infoBox {
+    width: 100%;
+
+    margin-top: 28px;
+    padding: 14px;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    border: 1px solid #ccebdd;
+    border-radius: 9px;
+
+    background: #effaf5;
+}
+
+.infoBox>span {
+    width: 40px;
+    height: 40px;
+
+    display: grid;
+    place-items: center;
+
+    flex-shrink: 0;
+
+    border-radius: 8px;
+
+    background: #dcf7ea;
+    color: #059669;
+
+    font-size: 17px;
+}
+
+.infoBox>div {
+    min-width: 0;
+}
+
+.infoBox strong {
+    display: block;
+
+    color: #334155;
+    font-size: 12px;
+}
+
+.infoBox p {
+    margin: 4px 0 0;
+
+    color: #64748b;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+/* Add Supplier */
+.submitButton {
+    width: 100%;
+    min-height: 52px;
+
+    margin-top: 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    border: 0;
+    border-radius: 9px;
+
+    background: #079a62;
+    color: #ffffff;
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.15s ease;
+}
+
+.submitButton:hover {
+    background: #078653;
+}
+
+.submitButton:active {
+    transform: scale(0.99);
+}
+
+.submitButton span {
+    font-size: 19px;
+}
+
+@media (max-width: 650px) {
+    .formGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .fullWidth {
+        grid-column: auto;
+    }
+}

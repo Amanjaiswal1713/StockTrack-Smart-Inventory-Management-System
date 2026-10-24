@@ -1,0 +1,277 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+
+    width: 245px;
+    min-height: 100vh;
+    padding: 0 14px 22px;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow-y: auto;
+
+    background:
+        radial-gradient(circle at 15% 10%,
+            rgba(16, 185, 129, 0.12),
+            transparent 28%),
+        linear-gradient(180deg, #102b43 0%, #0d243a 55%, #0a2034 100%);
+
+    color: #ffffff;
+
+    box-shadow: 10px 0 30px rgba(15, 23, 42, 0.08);
+}
+
+/* ========================
+   BRAND
+======================== */
+
+.brand {
+    min-height: 86px;
+    padding: 17px 8px 16px;
+
+    display: flex;
+    align-items: center;
+    gap: 11px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.logoMark {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 9px;
+    background: linear-gradient(135deg, #34d399, #059669);
+
+    color: #ffffff;
+    box-shadow: 0 8px 18px rgba(16, 185, 129, 0.22);
+
+    transform: rotate(30deg);
+}
+
+.logoMark span {
+    font-size: 20px;
+    transform: rotate(-30deg);
+}
+
+.brandText {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.brandText strong {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.7px;
+}
+
+.brandText strong span {
+    color: #34d399;
+}
+
+.brandText small {
+    margin-top: 6px;
+
+    overflow: hidden;
+
+    color: #a9bad0;
+    font-size: 11px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.closeButton {
+    display: none;
+
+    margin-left: auto;
+    border: 0;
+    background: transparent;
+
+    color: #cbd5e1;
+    font-size: 26px;
+    line-height: 1;
+}
+
+/* ========================
+   NAVIGATION
+======================== */
+
+.navigation {
+    margin-top: 13px;
+
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.link {
+    position: relative;
+
+    min-height: 46px;
+    padding: 0 14px;
+
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    border-radius: 8px;
+
+    color: #c7d3e2;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.link::before {
+    position: absolute;
+    top: 8px;
+    bottom: 8px;
+    left: -14px;
+
+    width: 4px;
+
+    border-radius: 0 4px 4px 0;
+    background: #34d399;
+
+    content: "";
+    opacity: 0;
+
+    transition: opacity 0.2s ease;
+}
+
+.link:hover {
+    background: rgba(59, 130, 246, 0.12);
+    color: #ffffff;
+    transform: translateX(2px);
+}
+
+.active {
+    background: linear-gradient(90deg,
+            rgba(37, 99, 235, 0.32),
+            rgba(59, 130, 246, 0.2));
+
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.active::before {
+    opacity: 1;
+}
+
+.linkIcon {
+    width: 22px;
+
+    display: inline-grid;
+    place-items: center;
+
+    color: #dae5f2;
+    font-size: 20px;
+    line-height: 1;
+}
+
+/* ========================
+   BOTTOM AREA
+======================== */
+
+.bottomArea {
+    margin-top: 20px;
+}
+
+.tagline {
+    padding: 20px 12px 18px;
+    text-align: center;
+}
+
+.leaf {
+    display: block;
+    margin-bottom: 8px;
+
+    font-size: 33px;
+}
+
+.tagline p {
+    margin: 0;
+
+    color: #d7e1ec;
+    font-size: 12px;
+    line-height: 1.55;
+}
+
+.taglineLine {
+    width: 55px;
+    height: 2px;
+    margin: 12px auto 0;
+
+    display: block;
+
+    border-radius: 999px;
+    background: linear-gradient(90deg, #34d399, #facc15);
+}
+
+.logout {
+    width: 100%;
+    min-height: 43px;
+    padding: 0 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    border: 1px solid rgba(255, 255, 255, 0.17);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.04);
+    color: #e2e8f0;
+    font-size: 12px;
+    font-weight: 700;
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.logout:hover {
+    border-color: rgba(248, 113, 113, 0.65);
+    background: rgba(239, 68, 68, 0.12);
+    color: #fecaca;
+}
+
+.sidebar::-webkit-scrollbar {
+    width: 5px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    border-radius: 999px;
+    background: rgba(148, 163, 184, 0.3);
+}
+
+@media (max-width: 900px) {
+    .sidebar {
+        left: -265px;
+        transition: left 0.25s ease;
+    }
+
+    .open {
+        left: 0;
+    }
+
+    .closeButton {
+        display: block;
+    }
+}

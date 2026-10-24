@@ -1,0 +1,1 @@
+export function searchItems(items, query) { const normalizedQuery = query.trim().toLowerCase(); if (!normalizedQuery) { return items; } return items.filter((item) => JSON.stringify(item).toLowerCase().includes(normalizedQuery)); }

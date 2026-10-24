@@ -1,0 +1,631 @@
+.page {
+    width: 100%;
+}
+
+.pageHeader {
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.pageHeader h1 {
+    margin: 0;
+    color: #17243a;
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: -0.8px;
+}
+
+.pageHeader p {
+    margin: 5px 0 0;
+    color: #718095;
+    font-size: 11px;
+}
+
+.exportAllButton {
+    min-height: 40px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: none;
+    border-radius: 7px;
+    background: linear-gradient(135deg,
+            #10b981,
+            #078952);
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 800;
+    box-shadow: 0 7px 16px rgba(16, 185, 129, 0.18);
+}
+
+.exportAllButton span {
+    font-size: 15px;
+}
+
+.summaryGrid {
+    margin-bottom: 14px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 13px;
+}
+
+.summaryCard {
+    min-height: 100px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border: 1px solid #e1e9ef;
+    border-radius: 9px;
+    background: #ffffff;
+    box-shadow: 0 6px 17px rgba(26, 48, 70, 0.035);
+}
+
+.productSummary,
+.revenueSummary,
+.inventorySummary,
+.supplierSummary {
+    width: 46px;
+    height: 46px;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.productSummary {
+    background: #eaf3ff;
+    color: #347fdf;
+}
+
+.revenueSummary {
+    background: #e6f9ef;
+    color: #0ca36a;
+}
+
+.inventorySummary {
+    background: #fff4da;
+    color: #e49a0a;
+}
+
+.supplierSummary {
+    background: #f0ebff;
+    color: #7559dc;
+}
+
+.summaryCard p {
+    margin: 0;
+    color: #708094;
+    font-size: 11px;
+}
+
+.summaryCard strong {
+    display: block;
+    margin-top: 3px;
+    color: #17243a;
+    font-size: 20px;
+}
+
+.summaryCard small {
+    display: block;
+    margin-top: 2px;
+    color: #8b98a7;
+    font-size: 11px;
+}
+
+.reportSection,
+.performanceCard,
+.inventoryCard,
+.productInsights,
+.movementCard,
+.exportCard {
+    padding: 15px;
+    border: 1px solid #e1e9ef;
+    border-radius: 9px;
+    background: #ffffff;
+    box-shadow: 0 6px 18px rgba(26, 48, 70, 0.035);
+}
+
+.reportSection {
+    margin-bottom: 14px;
+}
+
+.sectionHeader {
+    margin-bottom: 13px;
+}
+
+.sectionHeader h2,
+.cardHeader h2 {
+    margin: 0;
+    color: #19283e;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.sectionHeader p,
+.cardHeader p {
+    margin: 3px 0 0;
+    color: #8190a1;
+    font-size: 10px;
+}
+
+.reportGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.reportCard {
+    padding: 14px;
+    border: 1px solid #e7edf2;
+    border-radius: 8px;
+    background: #fbfcfd;
+}
+
+.reportTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.reportIcon {
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    border-radius: 9px;
+    font-size: 17px;
+    font-weight: 800;
+}
+
+.blueIcon {
+    background: #eaf3ff;
+    color: #347fdf;
+}
+
+.purpleIcon {
+    background: #f0ebff;
+    color: #7559dc;
+}
+
+.greenIcon {
+    background: #e6f9ef;
+    color: #0ca36a;
+}
+
+.orangeIcon {
+    background: #fff4da;
+    color: #e49a0a;
+}
+
+.ready {
+    padding: 4px 7px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    border-radius: 999px;
+    background: #e7f9ef;
+    color: #09975f;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.ready span {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: currentColor;
+}
+
+.reportCard h3 {
+    margin: 12px 0 0;
+    color: #25354a;
+    font-size: 11px;
+}
+
+.reportCard>p {
+    min-height: 29px;
+    margin: 5px 0 0;
+    color: #7b899a;
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+.reportValue {
+    margin-top: 11px;
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+}
+
+.reportValue strong {
+    color: #17243a;
+    font-size: 18px;
+}
+
+.reportValue span {
+    color: #8794a3;
+    font-size: 11px;
+}
+
+.reportCard>button {
+    width: 100%;
+    min-height: 34px;
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    border: 1px solid #d6e4dd;
+    border-radius: 6px;
+    background: #ffffff;
+    color: #0b9560;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.detailsGrid {
+    margin-bottom: 14px;
+    display: grid;
+    grid-template-columns: 1.5fr 0.7fr;
+    gap: 14px;
+}
+
+.cardHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.greenBadge,
+.blueBadge {
+    padding: 5px 8px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.greenBadge {
+    background: #e6f9ef;
+    color: #0b9560;
+}
+
+.blueBadge {
+    background: #eaf3ff;
+    color: #347fdf;
+}
+
+.performanceStats {
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 9px;
+}
+
+.performanceStats>div {
+    padding: 9px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 7px;
+    background: #f8fafc;
+}
+
+.performanceStats span {
+    color: #8190a1;
+    font-size: 11px;
+}
+
+.performanceStats strong {
+    margin-top: 3px;
+    color: #25354a;
+    font-size: 10px;
+}
+
+.chart {
+    position: relative;
+    height: 130px;
+    margin-top: 15px;
+}
+
+.chartLineOne,
+.chartLineTwo,
+.chartLineThree {
+    position: absolute;
+    right: 0;
+    left: 0;
+    height: 1px;
+    background: #edf1f4;
+}
+
+.chartLineOne {
+    top: 30px;
+}
+
+.chartLineTwo {
+    top: 65px;
+}
+
+.chartLineThree {
+    top: 100px;
+}
+
+.chartBars {
+    position: absolute;
+    inset: 0 15px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    gap: 12px;
+}
+
+.chartBars span {
+    width: 9%;
+    border-radius: 4px 4px 0 0;
+    background: linear-gradient(180deg,
+            #34d399,
+            #10b981);
+}
+
+.inventoryList {
+    margin-top: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.inventoryList>div {
+    padding: 9px;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    border: 1px solid #edf1f4;
+    border-radius: 7px;
+    background: #fbfcfd;
+}
+
+.inventoryGreen,
+.inventoryYellow,
+.inventoryRed,
+.inventoryPurple {
+    width: 31px;
+    height: 31px;
+    display: grid;
+    place-items: center;
+    border-radius: 7px;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.inventoryGreen {
+    background: #e6f9ef;
+    color: #0ca36a;
+}
+
+.inventoryYellow {
+    background: #fff4da;
+    color: #e49a0a;
+}
+
+.inventoryRed {
+    background: #ffeaed;
+    color: #dc3e51;
+}
+
+.inventoryPurple {
+    background: #f0ebff;
+    color: #7559dc;
+}
+
+.inventoryList section {
+    display: flex;
+    flex-direction: column;
+}
+
+.inventoryList small {
+    color: #8190a1;
+    font-size: 11px;
+}
+
+.inventoryList strong {
+    margin-top: 2px;
+    color: #25354a;
+    font-size: 11px;
+}
+
+.bottomGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.8fr;
+    gap: 14px;
+}
+
+.insightRows {
+    margin-top: 14px;
+    display: flex;
+    flex-direction: column;
+}
+
+.insightRows>div {
+    padding: 9px 0;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #edf1f4;
+    color: #718095;
+    font-size: 10px;
+}
+
+.insightRows>div:last-child {
+    border-bottom: none;
+}
+
+.insightRows strong {
+    color: #25354a;
+}
+
+.movementSummary {
+    margin-top: 14px;
+}
+
+.movementNumber {
+    padding: 13px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+    background: #f6faf8;
+}
+
+.movementNumber strong {
+    color: #0b9560;
+    font-size: 26px;
+}
+
+.movementNumber span {
+    margin-top: 2px;
+    color: #8190a1;
+    font-size: 11px;
+}
+
+.movementTypes {
+    margin-top: 11px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.movementTypes>div {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 7px;
+}
+
+.greenDot,
+.redDot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+}
+
+.greenDot {
+    background: #10b981;
+}
+
+.redDot {
+    background: #ef4444;
+}
+
+.movementTypes p {
+    margin: 0;
+    color: #718095;
+    font-size: 10px;
+}
+
+.movementTypes strong {
+    color: #25354a;
+    font-size: 11px;
+}
+
+.exportCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(135deg,
+            #eaf9f3,
+            #f7fcfa);
+}
+
+.exportIcon {
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: #10b981;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.exportCard h2 {
+    margin: 10px 0 0;
+    color: #25354a;
+    font-size: 12px;
+}
+
+.exportCard p {
+    max-width: 190px;
+    margin: 6px 0 0;
+    color: #718095;
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+.exportCard button {
+    min-height: 34px;
+    margin-top: 12px;
+    padding: 0 13px;
+    border: none;
+    border-radius: 6px;
+    background: #0b9560;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+@media (max-width: 1100px) {
+    .summaryGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .reportGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .bottomGrid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .exportCard {
+        grid-column: 1 / 3;
+    }
+}
+
+@media (max-width: 800px) {
+
+    .detailsGrid,
+    .bottomGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .exportCard {
+        grid-column: auto;
+    }
+
+    .performanceStats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .pageHeader {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .exportAllButton {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .summaryGrid,
+    .reportGrid,
+    .performanceStats {
+        grid-template-columns: 1fr;
+    }
+}

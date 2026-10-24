@@ -1,0 +1,731 @@
+.page {
+    width: 100%;
+}
+
+.pageHeader {
+    margin-bottom: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.pageHeader h1 {
+    margin: 0;
+
+    color: #17243a;
+
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: -0.8px;
+}
+
+.pageHeader p {
+    margin: 5px 0 0;
+
+    color: #718095;
+
+    font-size: 11px;
+}
+
+.periodButton {
+    min-height: 39px;
+    padding: 0 14px;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    border: 1px solid #dce5ed;
+    border-radius: 7px;
+
+    background: #ffffff;
+    color: #536579;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.statsGrid {
+    margin-bottom: 14px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 13px;
+}
+
+.statCard {
+    min-height: 100px;
+    padding: 15px;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    border: 1px solid #e1e9ef;
+    border-radius: 9px;
+
+    background: #ffffff;
+
+    box-shadow: 0 6px 17px rgba(26, 48, 70, 0.035);
+}
+
+.revenueIcon,
+.salesIcon,
+.productIcon,
+.inventoryIcon {
+    width: 46px;
+    height: 46px;
+
+    display: grid;
+    place-items: center;
+
+    flex-shrink: 0;
+
+    border-radius: 10px;
+
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.revenueIcon {
+    background: #e5f9ef;
+    color: #0ca36a;
+}
+
+.salesIcon {
+    background: #eaf3ff;
+    color: #347fdf;
+}
+
+.productIcon {
+    background: #fff4da;
+    color: #e49a0a;
+}
+
+.inventoryIcon {
+    background: #f0ebff;
+    color: #7559dc;
+}
+
+.statCard p {
+    margin: 0;
+
+    color: #708094;
+
+    font-size: 11px;
+}
+
+.statCard strong {
+    display: block;
+
+    margin-top: 3px;
+
+    color: #17243a;
+
+    font-size: 20px;
+}
+
+.statCard small {
+    display: block;
+
+    margin-top: 2px;
+
+    color: #8b98a7;
+
+    font-size: 11px;
+}
+
+.chartGrid {
+    margin-bottom: 14px;
+
+    display: grid;
+    grid-template-columns: 1.7fr 0.7fr;
+    gap: 14px;
+}
+
+.largeChartCard,
+.distributionCard,
+.topProductsCard,
+.categoryCard,
+.insightCard,
+.lowPerformanceCard,
+.healthCard {
+    padding: 15px;
+
+    border: 1px solid #e1e9ef;
+    border-radius: 9px;
+
+    background: #ffffff;
+
+    box-shadow: 0 6px 18px rgba(26, 48, 70, 0.035);
+}
+
+.cardHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.cardHeader h2,
+.healthCard h2 {
+    margin: 0;
+
+    color: #19283e;
+
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.cardHeader p,
+.healthCard header p {
+    margin: 3px 0 0;
+
+    color: #8190a1;
+
+    font-size: 10px;
+}
+
+.chartTag {
+    padding: 5px 9px;
+
+    border-radius: 999px;
+
+    background: #e7f9ef;
+    color: #0b9560;
+
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.chartContainer {
+    width: 100%;
+    height: 280px;
+
+    margin-top: 15px;
+}
+
+.distributionCard {
+    min-height: 340px;
+}
+
+.pieContainer {
+    position: relative;
+
+    width: 100%;
+    height: 190px;
+
+    margin-top: 8px;
+}
+
+.pieCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    transform: translate(-50%, -50%);
+
+    pointer-events: none;
+}
+
+.pieCenter strong {
+    color: #17243a;
+
+    font-size: 18px;
+}
+
+.pieCenter span {
+    color: #8190a1;
+
+    font-size: 11px;
+}
+
+.legend {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.legend>div {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 8px;
+}
+
+.legend>div>span {
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+}
+
+.legend p {
+    margin: 0;
+
+    color: #617185;
+
+    font-size: 10px;
+}
+
+.legend strong {
+    color: #26364a;
+
+    font-size: 11px;
+}
+
+.middleGrid {
+    margin-bottom: 14px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.productList,
+.categoryList {
+    margin-top: 14px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.productRow {
+    display: grid;
+    grid-template-columns: auto 1fr 1.4fr auto;
+    align-items: center;
+    gap: 9px;
+}
+
+.rank {
+    width: 25px;
+    height: 25px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 6px;
+
+    background: #edf5ff;
+    color: #347fdf;
+
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.productName {
+    display: flex;
+    flex-direction: column;
+}
+
+.productName strong {
+    color: #25354a;
+
+    font-size: 11px;
+}
+
+.productName small {
+    margin-top: 2px;
+
+    color: #8794a3;
+
+    font-size: 11px;
+}
+
+.progress {
+    height: 6px;
+
+    overflow: hidden;
+
+    border-radius: 999px;
+
+    background: #e8eef3;
+}
+
+.progress span {
+    height: 100%;
+
+    display: block;
+
+    border-radius: 999px;
+
+    background: linear-gradient(90deg,
+            #10b981,
+            #3b82f6);
+}
+
+.sold {
+    display: flex;
+    align-items: baseline;
+    gap: 3px;
+}
+
+.sold strong {
+    color: #26364a;
+
+    font-size: 11px;
+}
+
+.sold small {
+    color: #8794a3;
+
+    font-size: 11px;
+}
+
+.empty {
+    padding: 30px 0;
+
+    color: #8794a3;
+
+    font-size: 11px;
+    text-align: center;
+}
+
+.categoryRow {
+    min-height: 48px;
+    padding: 8px;
+
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    align-items: center;
+    gap: 9px;
+
+    border: 1px solid #edf1f4;
+    border-radius: 7px;
+
+    background: #fbfcfd;
+}
+
+.categoryBlue,
+.categoryGreen,
+.categoryOrange,
+.categoryPurple {
+    width: 31px;
+    height: 31px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 7px;
+
+    font-size: 13px;
+}
+
+.categoryBlue {
+    background: #eaf3ff;
+    color: #347fdf;
+}
+
+.categoryGreen {
+    background: #e6f9ef;
+    color: #0ca36a;
+}
+
+.categoryOrange {
+    background: #fff4da;
+    color: #e49a0a;
+}
+
+.categoryPurple {
+    background: #f0ebff;
+    color: #7559dc;
+}
+
+.categoryRow>div,
+.categoryRow section {
+    display: flex;
+    flex-direction: column;
+}
+
+.categoryRow strong {
+    color: #26364a;
+
+    font-size: 11px;
+}
+
+.categoryRow small {
+    margin-top: 2px;
+
+    color: #8794a3;
+
+    font-size: 11px;
+}
+
+.categoryRow section {
+    min-width: 55px;
+
+    text-align: right;
+}
+
+.bottomGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.7fr;
+    gap: 14px;
+}
+
+.insightList {
+    margin-top: 14px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.insightList>div {
+    padding: 9px;
+
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    border: 1px solid #edf1f4;
+    border-radius: 7px;
+
+    background: #fbfcfd;
+}
+
+.insightGreen,
+.insightBlue,
+.insightOrange {
+    width: 32px;
+    height: 32px;
+
+    display: grid;
+    place-items: center;
+
+    flex-shrink: 0;
+
+    border-radius: 7px;
+
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.insightGreen {
+    background: #e6f9ef;
+    color: #0ca36a;
+}
+
+.insightBlue {
+    background: #eaf3ff;
+    color: #347fdf;
+}
+
+.insightOrange {
+    background: #fff4da;
+    color: #e49a0a;
+}
+
+.insightList section {
+    display: flex;
+    flex-direction: column;
+}
+
+.insightList strong {
+    color: #26364a;
+
+    font-size: 11px;
+}
+
+.insightList p {
+    margin: 3px 0 0;
+
+    color: #8190a1;
+
+    font-size: 11px;
+}
+
+.lowPerformanceList {
+    margin-top: 14px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.lowPerformanceList>div {
+    min-height: 45px;
+    padding: 8px;
+
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 8px;
+
+    border: 1px solid #edf1f4;
+    border-radius: 7px;
+
+    background: #fbfcfd;
+}
+
+.lowPerformanceList>div>span {
+    width: 30px;
+    height: 30px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 7px;
+
+    background: #fff1e8;
+    color: #e48b33;
+
+    font-size: 12px;
+}
+
+.lowPerformanceList section,
+.lowPerformanceList>div>div {
+    display: flex;
+    flex-direction: column;
+}
+
+.lowPerformanceList section strong,
+.lowPerformanceList>div>div strong {
+    color: #26364a;
+
+    font-size: 11px;
+}
+
+.lowPerformanceList small {
+    margin-top: 2px;
+
+    color: #8794a3;
+
+    font-size: 11px;
+}
+
+.lowPerformanceList>div>div {
+    text-align: right;
+}
+
+.healthCard {
+    text-align: center;
+}
+
+.healthCard header {
+    text-align: left;
+}
+
+.healthCircle {
+    width: 120px;
+    height: 120px;
+
+    margin: 20px auto 15px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+}
+
+.healthCircle>div {
+    width: 82px;
+    height: 82px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+}
+
+.healthCircle strong {
+    color: #0b9560;
+
+    font-size: 21px;
+}
+
+.healthCircle span {
+    margin-top: 2px;
+
+    color: #8794a3;
+
+    font-size: 11px;
+}
+
+.healthMessage {
+    margin: 0;
+
+    color: #69798c;
+
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+@media (max-width: 1100px) {
+    .statsGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .chartGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .bottomGrid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .healthCard {
+        grid-column: 1 / 3;
+    }
+}
+
+@media (max-width: 800px) {
+    .middleGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .bottomGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .healthCard {
+        grid-column: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .pageHeader {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .periodButton {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .statsGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .chartContainer {
+        height: 240px;
+    }
+
+    .productRow {
+        grid-template-columns: auto 1fr auto;
+    }
+
+    .progress {
+        grid-column: 2 / 4;
+    }
+
+    .categoryRow {
+        grid-template-columns: auto 1fr auto;
+    }
+
+    .categoryRow section:last-child {
+        display: none;
+    }
+}

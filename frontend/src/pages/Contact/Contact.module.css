@@ -1,0 +1,820 @@
+.page {
+    min-height: 100vh;
+    background: #f8fbfd;
+}
+
+.hero {
+    overflow: hidden;
+
+    border-bottom: 1px solid #e3edf0;
+
+    background: linear-gradient(100deg,
+            #f0fbf8 0%,
+            #eefbfb 58%,
+            #dff7ef 100%);
+}
+
+.heroInner {
+    width: min(1180px, calc(100% - 48px));
+    min-height: 225px;
+
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 40px;
+}
+
+.heroContent {
+    padding: 28px 0;
+}
+
+.eyebrow {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: #178458;
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.6px;
+}
+
+.heroContent h1 {
+    margin: 0;
+
+    color: #10213c;
+
+    font-size: clamp(38px, 4vw, 49px);
+    font-weight: 800;
+    letter-spacing: -1.8px;
+}
+
+.heroContent h1 span {
+    color: #0c9d68;
+}
+
+.heroContent>p {
+    max-width: 650px;
+
+    margin: 8px 0 0;
+
+    color: #57697c;
+
+    font-size: 14px;
+    line-height: 1.45;
+}
+
+.supportItems {
+    margin-top: 24px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 13px;
+}
+
+.supportItem {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.supportItem>span {
+    font-size: 32px;
+}
+
+.supportGreen {
+    color: #0ca36a;
+}
+
+.supportBlue {
+    color: #3387e8;
+}
+
+.supportPurple {
+    color: #755ce0;
+}
+
+.supportYellow {
+    color: #f2ae1c;
+}
+
+.supportItem div {
+    display: flex;
+    flex-direction: column;
+}
+
+.supportItem strong {
+    color: #1e293b;
+
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.supportItem small {
+    margin-top: 3px;
+
+    color: #68788d;
+
+    font-size: 10px;
+}
+
+.heroVisual {
+    position: relative;
+    height: 225px;
+}
+
+.messageCard {
+    position: absolute;
+    top: 35px;
+    left: 135px;
+
+    z-index: 3;
+
+    width: 165px;
+    min-height: 150px;
+
+    padding: 24px 20px;
+
+    border: 6px solid white;
+    border-radius: 15px;
+
+    background: #f7fafc;
+
+    box-shadow: 0 15px 34px rgba(34, 88, 95, 0.13);
+
+    transform: rotate(-4deg);
+}
+
+.messageCard strong {
+    color: #11203a;
+
+    font-size: 18px;
+    line-height: 1.08;
+}
+
+.messageCard span {
+    width: 34px;
+    height: 3px;
+
+    margin-top: 14px;
+
+    display: block;
+
+    border-radius: 5px;
+    background: #0ca26b;
+}
+
+.envelope {
+    position: absolute;
+    top: 65px;
+    left: 35px;
+
+    z-index: 2;
+
+    color: #308be9;
+
+    font-size: 91px;
+
+    transform: rotate(-10deg);
+}
+
+.paperPlane {
+    position: absolute;
+    top: 15px;
+    left: 45px;
+
+    color: #08aa70;
+
+    font-size: 51px;
+
+    transform: rotate(-18deg);
+}
+
+.plant {
+    position: absolute;
+    right: 58px;
+    bottom: -10px;
+
+    color: #138f58;
+
+    font-size: 86px;
+
+    transform: rotate(-11deg);
+}
+
+.handText {
+    position: absolute;
+    top: 28px;
+    right: 0;
+
+    color: #173b3f;
+
+    font-size: 17px;
+    font-style: italic;
+    line-height: 1.1;
+
+    transform: rotate(-9deg);
+}
+
+.contactSection {
+    width: min(1180px, calc(100% - 48px));
+
+    margin: 0 auto;
+
+    padding: 12px 0 28px;
+}
+
+.contactGrid {
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+    gap: 16px;
+}
+
+.messagePanel,
+.informationPanel,
+.faqPanel {
+    border: 1px solid #e1e9ef;
+    border-radius: 9px;
+
+    background: #ffffff;
+
+    box-shadow: 0 8px 23px rgba(31, 55, 73, 0.035);
+}
+
+.messagePanel {
+    padding: 17px;
+}
+
+.panelHeading h2 {
+    margin: 0;
+
+    color: #14213d;
+
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.panelHeading p {
+    margin: 3px 0 0;
+
+    color: #64758a;
+
+    font-size: 11px;
+}
+
+.form {
+    margin-top: 16px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.twoColumns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+}
+
+.form label {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.form label>span {
+    color: #24334a;
+
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.form label>span strong {
+    color: #dc2626;
+}
+
+.form input,
+.form select,
+.form textarea {
+    width: 100%;
+
+    border: 1px solid #dce5ed;
+    border-radius: 7px;
+
+    outline: none;
+
+    background: #fbfcfd;
+    color: #24364b;
+
+    font-size: 10px;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.form input,
+.form select {
+    height: 39px;
+    padding: 0 12px;
+}
+
+.form textarea {
+    min-height: 102px;
+    padding: 12px;
+
+    resize: vertical;
+}
+
+.form input:focus,
+.form select:focus,
+.form textarea:focus {
+    border-color: #0ca36b;
+
+    box-shadow: 0 0 0 3px rgba(12, 163, 107, 0.08);
+}
+
+.form input::placeholder,
+.form textarea::placeholder {
+    color: #8b98a8;
+}
+
+.counter {
+    position: absolute;
+    right: 4px;
+    bottom: -12px;
+
+    color: #8492a3;
+
+    font-size: 10px;
+}
+
+.submitButton {
+    min-height: 42px;
+
+    margin-top: 4px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    border: none;
+    border-radius: 6px;
+
+    background: linear-gradient(135deg,
+            #0fab70,
+            #068956);
+
+    color: #ffffff;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    box-shadow: 0 7px 16px rgba(9, 146, 91, 0.16);
+}
+
+.successMessage {
+    margin: 0;
+
+    border: 1px solid #bbefd6;
+    border-radius: 6px;
+
+    padding: 8px;
+
+    background: #edfdf5;
+    color: #08794b;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    text-align: center;
+}
+
+.growTogether {
+    min-height: 64px;
+
+    margin-top: 25px;
+    padding: 12px 18px;
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    border-radius: 8px;
+
+    background: linear-gradient(90deg,
+            #e5f8f0,
+            #eefbf7);
+}
+
+.groupIcon {
+    color: #0b9c65;
+    font-size: 32px;
+}
+
+.growTogether div {
+    flex: 1;
+}
+
+.growTogether strong {
+    color: #17243b;
+
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.growTogether p {
+    margin: 3px 0 0;
+
+    color: #5e7083;
+
+    font-size: 11px;
+}
+
+.growPlant {
+    font-size: 35px;
+}
+
+.informationColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.informationPanel {
+    padding: 15px;
+}
+
+.infoGrid {
+    margin-top: 12px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 7px;
+}
+
+.infoCard {
+    min-height: 105px;
+
+    padding: 11px;
+
+    border-radius: 7px;
+}
+
+.phoneCard {
+    background: #ecfaf4;
+}
+
+.emailCard {
+    background: #edf6ff;
+}
+
+.officeCard {
+    background: #f2efff;
+}
+
+.hoursCard {
+    background: #fff8e9;
+}
+
+.infoIcon {
+    width: 27px;
+    height: 27px;
+
+    margin-bottom: 6px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 7px;
+
+    background: #0ca26b;
+    color: white;
+
+    font-size: 12px;
+}
+
+.emailCard .infoIcon {
+    background: #308ce9;
+}
+
+.officeCard .infoIcon {
+    background: #745bdd;
+}
+
+.hoursCard .infoIcon {
+    background: #efab19;
+}
+
+.infoCard strong {
+    display: block;
+
+    color: #19263c;
+
+    font-size: 11px;
+}
+
+.infoCard p {
+    margin: 4px 0 2px;
+
+    color: #26384e;
+
+    font-size: 11px;
+}
+
+.infoCard small {
+    color: #758498;
+    font-size: 10px;
+}
+
+.visitPanel {
+    margin-top: 10px;
+
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 12px;
+}
+
+.mapContainer {
+    position: relative;
+    width: 100%;
+    min-height: 220px;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+    border: 1px solid #dce7e2;
+}
+
+.mapFrame {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+    min-height: 220px;
+
+    border: 0;
+}
+
+.openMapButton {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    z-index: 5;
+
+    min-height: 36px;
+    padding: 0 13px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 7px;
+
+    background: rgba(255,
+            255,
+            255,
+            0.95);
+
+    color: #087c52;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    box-shadow:
+        0 4px 14px rgba(25, 50, 45, 0.16);
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+.openMapButton:hover {
+    background: #ffffff;
+
+    transform:
+        translateY(-2px);
+}
+
+.openMapButton:focus-visible {
+    outline: 3px solid rgba(12, 163, 107, 0.25);
+
+    outline-offset: 2px;
+}
+
+.visitContent {
+    padding: 5px 3px;
+}
+
+.visitContent h3 {
+    margin: 0;
+
+    color: #18263c;
+
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.visitContent p {
+    margin: 7px 0 14px;
+
+    color: #607186;
+
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.directionsButton {
+    min-height: 40px;
+    padding: 0 15px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    border: 1px solid #31a078;
+    border-radius: 7px;
+
+    background: #ffffff;
+    color: #14835e;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition:
+        color 0.2s ease,
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.directionsButton:hover {
+    background: #14835e;
+    color: #ffffff;
+
+    transform:
+        translateY(-1px);
+
+    box-shadow:
+        0 5px 12px rgba(20, 131, 94, 0.18);
+}
+
+.directionsButton:focus-visible {
+    outline: 3px solid rgba(20, 131, 94, 0.2);
+
+    outline-offset: 2px;
+}
+
+.faqPanel {
+    padding: 12px;
+}
+
+.faqHeading {
+    margin-bottom: 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.faqHeading h2 {
+    margin: 0;
+
+    color: #17263b;
+
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.faqHeading p {
+    margin: 2px 0 0;
+
+    color: #6b798c;
+
+    font-size: 10px;
+}
+
+.faqHeading>span {
+    color: #2779c9;
+
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.faqList {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.faqList details {
+    border: 1px solid #e7edf2;
+    border-radius: 5px;
+
+    background: #fbfcfd;
+}
+
+.faqList summary {
+    min-height: 27px;
+
+    padding: 0 9px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    cursor: pointer;
+
+    color: #26354a;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    list-style: none;
+}
+
+.faqList summary::-webkit-details-marker {
+    display: none;
+}
+
+.faqList summary span {
+    color: #59708a;
+    font-size: 13px;
+}
+
+.faqList details p {
+    margin: 0;
+
+    padding: 0 9px 8px;
+
+    color: #68798d;
+
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+@media (max-width: 1000px) {
+    .heroInner {
+        grid-template-columns: 1fr 0.7fr;
+    }
+
+    .supportItems {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .infoGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 850px) {
+    .contactGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .heroInner {
+        grid-template-columns: 1fr;
+    }
+
+    .heroVisual {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .heroInner,
+    .contactSection {
+        width: min(100% - 30px, 1180px);
+    }
+
+    .heroContent {
+        padding: 35px 0;
+    }
+
+    .heroContent h1 {
+        font-size: 38px;
+    }
+
+    .supportItems,
+    .twoColumns,
+    .infoGrid,
+    .visitPanel {
+        grid-template-columns: 1fr;
+    }
+}

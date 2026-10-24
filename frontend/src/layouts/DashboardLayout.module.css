@@ -1,0 +1,367 @@
+.layout {
+    min-height: 100vh;
+    background: #f4f8fc;
+}
+
+.workspace {
+    min-height: 100vh;
+    margin-left: 245px;
+    display: flex;
+    flex-direction: column;
+}
+
+.topbar {
+    position: sticky;
+    top: 0;
+    z-index: 800;
+    width: 100%;
+    height: 64px;
+    padding: 0 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+
+    border-bottom: 1px solid #e3ebf3;
+    background: rgba(255, 255, 255, 0.97);
+
+    box-shadow: 0 3px 14px rgba(15, 23, 42, 0.035);
+    backdrop-filter: blur(12px);
+}
+
+.topbarLeft {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    gap: 14px;
+}
+
+.menuButton {
+    width: 39px;
+    height: 39px;
+
+    display: none;
+    place-items: center;
+
+    border: 1px solid #dce6ef;
+    border-radius: 8px;
+
+    background: #ffffff;
+    color: #0f2740;
+
+    font-size: 20px;
+}
+
+.searchForm {
+    position: relative;
+    width: min(430px, 100%);
+}
+
+.searchForm input {
+    width: 100%;
+    height: 40px;
+
+    padding-top: 0;
+    padding-right: 16px;
+    padding-bottom: 0;
+    padding-left: 43px;
+
+    border: 1px solid #e0e8f0;
+    border-radius: 8px;
+
+    outline: none;
+
+    background: #f3f7fb;
+    color: #12263f;
+
+    font-size: 12px;
+}
+
+.searchForm input::placeholder {
+    color: #8392a6;
+}
+
+.searchForm input:focus {
+    border-color: #10b981;
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+.searchIcon {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+
+    color: #52657a;
+    font-size: 23px;
+    line-height: 1;
+
+    transform: translateY(-54%);
+}
+
+.accountArea {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.notificationButton {
+    position: relative;
+
+    width: 39px;
+    height: 39px;
+
+    display: grid;
+    place-items: center;
+
+    border: none;
+    border-radius: 50%;
+
+    background: transparent;
+    color: #142a43;
+
+    font-size: 23px;
+}
+
+.notificationButton:hover {
+    background: #f1f5f9;
+}
+
+.notificationButton span {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+
+    min-width: 16px;
+    height: 16px;
+
+    display: grid;
+    place-items: center;
+
+    padding: 0 4px;
+
+    border: 2px solid #ffffff;
+    border-radius: 999px;
+
+    background: #ef4444;
+    color: #ffffff;
+
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.profileButton {
+    padding: 4px 6px;
+
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    border: none;
+    border-radius: 9px;
+
+    background: transparent;
+    color: #0f172a;
+
+    text-align: left;
+}
+
+.profileButton:hover {
+    background: #f1f5f9;
+}
+
+.avatar {
+    width: 37px;
+    height: 37px;
+
+    display: grid;
+    place-items: center;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: linear-gradient(135deg,
+            #0f9f8b,
+            #147d83);
+
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.accountText {
+    display: flex;
+    flex-direction: column;
+
+    line-height: 1.25;
+}
+
+.accountText strong {
+    color: #172033;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.accountText small {
+    max-width: 145px;
+
+    margin-top: 2px;
+
+    overflow: hidden;
+
+    color: #8290a2;
+
+    font-size: 11px;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.chevron {
+    color: #596a7e;
+    font-size: 14px;
+}
+
+.topLogout {
+    min-height: 34px;
+
+    padding-top: 0;
+    padding-right: 13px;
+    padding-bottom: 0;
+    padding-left: 13px;
+
+    border: 1px solid #dbe5ed;
+    border-radius: 7px;
+
+    background: #ffffff;
+    color: #475569;
+
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.topLogout:hover {
+    border-color: #fecaca;
+    background: #fff1f2;
+    color: #dc2626;
+}
+
+.main {
+    flex: 1;
+
+    background: linear-gradient(135deg,
+            rgba(239, 246, 255, 0.85),
+            rgba(248, 250, 252, 0.96));
+}
+
+.content {
+    width: 100%;
+    max-width: 1600px;
+
+    margin-top: 0;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto;
+
+    padding: 22px;
+}
+
+.overlay {
+    display: none;
+}
+
+@media (max-width: 1100px) {
+    .accountText small {
+        display: none;
+    }
+
+    .topLogout {
+        display: none;
+    }
+}
+
+@media (max-width: 900px) {
+    .workspace {
+        margin-left: 0;
+    }
+
+    .menuButton {
+        display: grid;
+    }
+
+    .overlay {
+        position: fixed;
+
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        z-index: 900;
+
+        display: block;
+
+        border: none;
+
+        background: rgba(4, 18, 32, 0.58);
+
+        backdrop-filter: blur(2px);
+    }
+}
+
+@media (max-width: 650px) {
+    .topbar {
+        height: 60px;
+        padding: 0 13px;
+        gap: 10px;
+    }
+
+    .searchForm input {
+        height: 38px;
+    }
+
+    .accountArea {
+        gap: 3px;
+    }
+
+    .accountText {
+        display: none;
+    }
+
+    .chevron {
+        display: none;
+    }
+
+    .profileButton {
+        padding: 2px;
+    }
+
+    .avatar {
+        width: 35px;
+        height: 35px;
+    }
+
+    .notificationButton {
+        width: 35px;
+        height: 35px;
+    }
+
+    .content {
+        padding: 16px;
+    }
+}
+
+@media (max-width: 450px) {
+    .searchForm input {
+        padding-right: 8px;
+        font-size: 10px;
+    }
+
+    .notificationButton {
+        display: none;
+    }
+}

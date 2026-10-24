@@ -1,0 +1,25 @@
+.primary{
+
+ background:#10b981;
+
+ color:white;
+
+ border:none;
+
+ padding:12px 20px;
+
+ border-radius:8px;
+}
+
+.danger{
+
+ background:#ef4444;
+
+ color:white;
+
+ border:none;
+
+ padding:12px 20px;
+
+ border-radius:8px;
+}

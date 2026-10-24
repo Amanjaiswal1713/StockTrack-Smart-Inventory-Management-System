@@ -1,0 +1,132 @@
+.overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+
+    padding: 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow-y: auto;
+
+    background: rgba(4, 18, 32, 0.58);
+
+    backdrop-filter: blur(4px);
+
+    animation: fadeIn 0.18s ease;
+}
+
+.modal {
+    position: relative;
+
+    width: min(920px, calc(100vw - 48px));
+    max-height: calc(100vh - 48px);
+
+    padding: 32px 36px;
+
+    box-sizing: border-box;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    border: 1px solid #e2e9ef;
+    border-radius: 16px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 30px 70px rgba(15, 23, 42, 0.2),
+        0 7px 20px rgba(15, 23, 42, 0.08);
+
+    animation: modalIn 0.2s ease;
+}
+
+.close {
+    position: absolute;
+    top: 13px;
+    right: 13px;
+    z-index: 10;
+
+    width: 31px;
+    height: 31px;
+
+    display: grid;
+    place-items: center;
+
+    border: 1px solid #e1e8ee;
+    border-radius: 7px;
+
+    background: #ffffff;
+    color: #68788b;
+
+    font-size: 19px;
+    line-height: 1;
+
+    transition:
+        background 0.15s ease,
+        border-color 0.15s ease,
+        color 0.15s ease;
+}
+
+.close:hover {
+    border-color: #fecdd3;
+
+    background: #fff1f2;
+    color: #dc3349;
+}
+
+.modal::-webkit-scrollbar {
+    width: 6px;
+}
+
+.modal::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.modal::-webkit-scrollbar-thumb {
+    border-radius: 999px;
+    background: #cad4dd;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes modalIn {
+    from {
+        opacity: 0;
+        transform: translateY(12px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@media (max-width: 600px) {
+    .overlay {
+        padding: 12px;
+    }
+
+    .modal {
+        max-height: calc(100vh - 24px);
+
+        padding: 22px 17px;
+
+        border-radius: 11px;
+    }
+
+    .close {
+        top: 9px;
+        right: 9px;
+    }
+}

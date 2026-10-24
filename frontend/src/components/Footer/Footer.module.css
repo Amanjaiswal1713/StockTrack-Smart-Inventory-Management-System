@@ -1,0 +1,197 @@
+.footer {
+    width: 100%;
+    margin-top: auto;
+    background: linear-gradient(135deg, #0b2239 0%, #071b2f 100%);
+    color: #ffffff;
+}
+
+.container {
+    width: min(1180px, calc(100% - 48px));
+    min-height: 105px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1.3fr 1fr auto 1.25fr;
+    align-items: center;
+    gap: 35px;
+}
+
+/* ========================
+   BRAND
+======================== */
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    color: white;
+    text-decoration: none;
+}
+
+.logoIcon {
+    width: 40px;
+    height: 40px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 8px;
+    background: linear-gradient(135deg, #34d399, #059669);
+
+    color: white;
+    font-size: 20px;
+
+    transform: rotate(30deg);
+}
+
+.brandText {
+    display: flex;
+    flex-direction: column;
+}
+
+.brandText strong {
+    font-size: 21px;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.brandText strong span {
+    color: #34d399;
+}
+
+.brandText small {
+    margin-top: 6px;
+    color: #94a3b8;
+    font-size: 11px;
+}
+
+/* ========================
+   LINKS
+======================== */
+
+.links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 26px;
+}
+
+.links a {
+    color: #cbd5e1;
+    font-size: 12px;
+    font-weight: 500;
+    text-decoration: none;
+
+    transition: color 0.2s ease;
+}
+
+.links a:hover {
+    color: #34d399;
+}
+
+/* ========================
+   SOCIAL
+======================== */
+
+.social {
+    display: flex;
+    gap: 9px;
+
+    padding: 0 25px;
+
+    border-right: 1px solid rgba(255, 255, 255, 0.16);
+    border-left: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.social a {
+    width: 29px;
+    height: 29px;
+
+    display: grid;
+    place-items: center;
+
+    border: 1px solid #334155;
+    border-radius: 7px;
+
+    color: #e2e8f0;
+    font-size: 11px;
+    font-weight: 700;
+    text-decoration: none;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.social a:hover {
+    border-color: #10b981;
+    background: #10b981;
+    color: white;
+}
+
+/* ========================
+   COPYRIGHT
+======================== */
+
+.copyright {
+    text-align: right;
+}
+
+.copyright p {
+    margin: 0 0 5px;
+    color: #cbd5e1;
+    font-size: 10px;
+}
+
+.copyright span {
+    color: #7f91a8;
+    font-size: 11px;
+}
+
+/* ========================
+   RESPONSIVE
+======================== */
+
+@media (max-width: 950px) {
+    .container {
+        grid-template-columns: 1fr 1fr;
+        padding: 30px 0;
+    }
+
+    .links {
+        justify-content: flex-end;
+    }
+
+    .social {
+        justify-self: start;
+        border: 0;
+        padding: 0;
+    }
+}
+
+@media (max-width: 620px) {
+    .container {
+        grid-template-columns: 1fr;
+        gap: 25px;
+
+        padding: 32px 0;
+
+        text-align: center;
+    }
+
+    .brand,
+    .links,
+    .social {
+        justify-self: center;
+    }
+
+    .links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .copyright {
+        text-align: center;
+    }
+}
